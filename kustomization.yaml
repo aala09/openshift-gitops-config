@@ -28,6 +28,9 @@ resources:
  - shippingservice.yaml
  - frontend-hpa.yaml
  - frontend-pdb.yaml 
+ - cronjob-scaler-rbac.yaml
+ - scale-down-cronjob.yaml
+ - scale-up-cronjob.yaml
 # components:
 # - ../kustomize/components/cymbal-branding
 # - ../kustomize/components/google-cloud-operations
