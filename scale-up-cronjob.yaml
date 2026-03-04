@@ -1,63 +1,31 @@
-
 apiVersion: batch/v1
-
 kind: CronJob
-
 metadata:
-
   name: scale-up-boutique
-
   namespace: online-boutique-dev
-
 spec:
-
   schedule: "0 8 * * 1-5"    # 8h du lundi au vendredi
-
   jobTemplate:
-
     spec:
-
       template:
-
         spec:
-
           serviceAccountName: cronjob-scaler
-
           containers:
-
           - name: oc
-
-            image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
-
+            image: quay.io/openshift/origin-cli:latest
             command:
-
             - /bin/bash
-
             - -c
-
             - |
-
               oc scale deployment/adservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/cartservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/checkoutservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/currencyservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/emailservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/frontend --replicas=1 -n online-boutique-dev
-
               oc scale deployment/paymentservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/productcatalogservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/recommendationservice --replicas=1 -n online-boutique-dev
-
               oc scale deployment/redis-cart --replicas=1 -n online-boutique-dev
-
               oc scale deployment/shippingservice --replicas=1 -n online-boutique-dev
-
           restartPolicy: OnFailure
-
