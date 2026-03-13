@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: adservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/adservice:dfd734c16b4a9fcd737bf8a90d623ac5ca8fc355
         ports:
         - containerPort: 9555
         env:
