@@ -42,7 +42,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: shippingservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/shippingservice:6f5498afcb1364e29a68579190b51a48354b47d6
         ports:
         - containerPort: 50051
         env:
