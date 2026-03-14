@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: emailservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/emailservice:cc972955682027ec67f4f943618aa5f092c28278
         ports:
         - containerPort: 8080
         env:
