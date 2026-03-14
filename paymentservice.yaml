@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: paymentservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/paymentservice:72ff554e973668f5885e416210778a8a9662e834
         ports:
         - containerPort: 50051
         env:
