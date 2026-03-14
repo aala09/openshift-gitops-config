@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:6e1625d20717eb786037b6ecf29c567e8361e8d6
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:ba0f2a515e084e5b5105981f2f302ef37c59036d
         ports:
         - containerPort: 7070
         env:
@@ -115,7 +115,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:6e1625d20717eb786037b6ecf29c567e8361e8d6
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:ba0f2a515e084e5b5105981f2f302ef37c59036d
         ports:
         - containerPort: 6379
         readinessProbe:
