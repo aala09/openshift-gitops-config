@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: productcatalogservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/productcatalogservice:457decebb9d46ca1209be2155f971b4445699f8a
         ports:
         - containerPort: 3550
         env:
