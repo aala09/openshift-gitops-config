@@ -64,7 +64,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: busybox:latest
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/loadgenerator:64988af4e149e204f6b17053ffccd48535015a13
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -77,7 +77,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: loadgenerator
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/loadgenerator:64988af4e149e204f6b17053ffccd48535015a13
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
