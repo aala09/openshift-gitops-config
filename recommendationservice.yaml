@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: recommendationservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/recommendationservice:5a2a53bfe23a692e56ed0b3684b84804d70929df
         ports:
         - containerPort: 8080
         readinessProbe:
