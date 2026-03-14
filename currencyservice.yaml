@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: currencyservice
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/currencyservice:d08ff2fea6365396777c9fd3f6fd71a61c7a09e3
         ports:
         - name: grpc
           containerPort: 7000
