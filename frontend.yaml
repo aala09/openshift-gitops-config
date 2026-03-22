@@ -44,7 +44,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/frontend:74bfafb4e1eb8ecc82a682980bd8ea21e3c50342
+          image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/frontend:9a45e180e6ab2e7b065c09c300aafc0d5db20d6c
           ports:
           - containerPort: 8080
           readinessProbe:
