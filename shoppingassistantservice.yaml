@@ -42,7 +42,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/shoppingassistantservice:latest
+        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/shoppingassistantservice:test456
         ports:
         - containerPort: 50051
         env:
