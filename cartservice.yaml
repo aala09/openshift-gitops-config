@@ -46,9 +46,9 @@ spec:
         image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:ba0f2a515e084e5b5105981f2f302ef37c59036d
         ports:
         - containerPort: 7070
-        env:
-        - name: REDIS_ADDR
-          value: "redis-cart:6379"
+        env: []
+        #- name: REDIS_ADDR
+         # value: "redis-cart:6379"
         resources:
           requests:
             cpu: 200m
