@@ -27,8 +27,12 @@ resources:
  - productcatalogservice.yaml
  - recommendationservice.yaml
  - shippingservice.yaml
+ - checkoutservice-hpa.yaml
+ - recommendationservice-hpa.yaml
  - frontend-hpa.yaml
  - frontend-pdb.yaml 
+ - checkoutservice-pdb.yaml
+ - cartservice-pdb.yaml
  - cronjob-scaler-rbac.yaml
  - scale-down-cronjob.yaml
  - scale-up-cronjob.yaml

@@ -1,0 +1,27 @@
+
+apiVersion: policy/v1
+
+kind: PodDisruptionBudget
+
+metadata:
+
+  name: checkoutservice-pdb
+
+  namespace: online-boutique-dev
+
+  labels:
+
+    app: checkoutservice
+
+    component: pdb
+
+spec:
+
+  minAvailable: 1
+
+  selector:
+
+    matchLabels:
+
+      app: checkoutservice
+
