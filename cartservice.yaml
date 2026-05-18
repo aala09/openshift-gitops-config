@@ -115,7 +115,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: image-registry.openshift-image-registry.svc:5000/online-boutique-ci/cartservice:ba0f2a515e084e5b5105981f2f302ef37c59036d
+        image: redis:alpine
         ports:
         - containerPort: 6379
         readinessProbe:
