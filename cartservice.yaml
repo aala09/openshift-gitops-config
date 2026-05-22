@@ -138,7 +138,8 @@ spec:
             memory: 200Mi
       volumes:
       - name: redis-data
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: redis-cart-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -154,3 +155,17 @@ spec:
   - name: tcp-redis
     port: 6379
     targetPort: 6379
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-cart-pvc
+  namespace: online-boutique-dev
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: ""  # Utilise le PV manuel que tu as créé
+  volumeName: redis-pv
